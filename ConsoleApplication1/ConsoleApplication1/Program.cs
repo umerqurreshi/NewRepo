@@ -6,6 +6,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+#region Creating, saving, deleting files
+
             // Everything here we use in real life so if you learn this: MASSIVE step!!!
 
             // Create a simple txt file and SEE where it is saved
@@ -44,6 +46,8 @@ namespace ConsoleApplication1
             // C:\Folder2\File1.txt
             var file3 = File.Create(Path.Combine(@"C:\Folder2", "File1.txt"));
             //StringReader sb = new StringReader("s");
+
+#endregion
         }
     }
 }
