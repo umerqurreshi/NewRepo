@@ -21,7 +21,7 @@ namespace ConsoleApplication1
             //See what Path.Combine does?? It combines TWO paths into a single path. 
             // Here we will get an error because once it
             // hits the break point, it'll do xxxx\Folder2\File1.txt....therefore we first need to 
-            //create a folder (DIRECTORY) called Folder2.....so let's do this on line 34
+            //create a folder (DIRECTORY) called Folder2.....so let's do this on line 37
 
             var file2 = File.Create(Path.Combine("Folder2", "File1.txt"));
 
@@ -33,6 +33,7 @@ namespace ConsoleApplication1
             // DOES NOT EXIST.... !Directory.Exists(...) means if Directory NOT exist....therefore
             // '!' means negating the if condition...so if it doesn't exist, only then go ahead
             // and create it
+
             if (!Directory.Exists(@"C:\Folder2"))
             {
                 Directory.CreateDirectory(@"C:\Folder2");
