@@ -26,7 +26,7 @@ namespace ConsoleApplication1
             var file2 = File.Create(Path.Combine("Folder2", "File1.txt"));
 
             // Now, comment out above 2 lines of code and then check C-drive for a folder called
-            // MySpecialFolder after you run the below  code...Note, the '@' removes the red 
+            // Folder2 after you run the below  code...Note, the '@' removes the red 
             //squiggly error we get because '\' is a special character which we must escape. Remove
             // the '@' symbol and see for yourself
             // Note how I am saying only create this folder (Directory) called Folder2 if it 
