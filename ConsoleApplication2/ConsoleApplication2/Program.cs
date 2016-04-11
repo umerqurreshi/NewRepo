@@ -22,7 +22,7 @@ namespace ConsoleApplication2
 
             // We have an Employee class Employee.cs with properties. Let's create an instance of
             // the Employee class and access it's properties
-            // Notice that the Job title and gender have been place into Enums which you can see 
+            // Notice that the Job title and gender have been placed into Enums which you can see 
             // in Employee.cs.....these enums ensure that the user doesn't make spelling mistakes
             // when typin in gender or job title and so enums give them preset options.
             Employee employee = new Employee();
