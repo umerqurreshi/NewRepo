@@ -11,7 +11,7 @@ namespace ConsoleApplication1
             // Everything here we use in real life so if you learn this: MASSIVE step!!!
 
             // Create a simple txt file and SEE where it is saved
-            //Put break point on line 16 and run code, when it hits break point, press f10 and see the
+            //Put break point on line 18 and run code, when it hits break point, press f10 and see the
             //value of 'file1' then go and find it by doing the below steps:
             // On right hand side in solution explorer, right click solution and click  
             // view folder in file explorer...Now find File1.txt...use value of file1 to help you!
