@@ -39,7 +39,7 @@ namespace ConsoleApplication1
                 Directory.CreateDirectory(@"C:\Folder2");
             }
 
-            // Now paste the line of code in line 23...var file2 =..... rename to var file3 =...
+            // Now paste the line of code in line 26...var file2 =..... rename to var file3 =...
             // Put break point on line 41 and see the path. It'll save File1.txt into Folder2 in
             // your c-drive. Use intellisense it hits break point to see value of file3 and really
             // see what Path.Combine does. Converts two paths into a single path, so, you can say,
