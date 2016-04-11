@@ -45,7 +45,6 @@ namespace ConsoleApplication1
             // C:\Folder2 is path 1 and File1.txt is path 2.....so Path.Combine will make this into
             // C:\Folder2\File1.txt
             var file3 = File.Create(Path.Combine(@"C:\Folder2", "File1.txt"));
-            //StringReader sb = new StringReader("s");
 
 #endregion
         }
