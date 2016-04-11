@@ -37,6 +37,18 @@ namespace ConsoleApplication3
 
            // Remove element at a specific index. Remove the name that is index position 1
             myList.RemoveAt(1);
+
+
+            // Lets loop through the List called myList and let us ensure that all the names in the 
+            // List are UPPERCASE, then let's store the new uppercase value in a varianle called 
+            // capitalizedValue
+            string capitalizedValue = String.Empty;
+
+            foreach (var item in myList)
+            {
+                capitalizedValue = item.ToUpper();
+                Console.WriteLine(capitalizedValue);
+            }
             Console.ReadLine();
         }
     }
