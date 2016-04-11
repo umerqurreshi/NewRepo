@@ -17,7 +17,7 @@ namespace ConsoleApplication1
             // view folder in file explorer...Now find File1.txt...use value of file1 to help you!
             var file1 = File.Create("File1.txt");
 
-            //Put break point on line 23 and run the application and see the error. 
+            //Put break point on line 26 and run the application and see the error. 
             //See what Path.Combine does?? It combines TWO paths into a single path. 
             // Here we will get an error because once it
             // hits the break point, it'll do xxxx\Folder2\File1.txt....therefore we first need to 
