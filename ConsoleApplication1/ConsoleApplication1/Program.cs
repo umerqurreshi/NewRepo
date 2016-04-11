@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -40,12 +41,14 @@ namespace ConsoleApplication1
             }
 
             // Now paste the line of code in line 26...var file2 =..... rename to var file3 =...
-            // Put break point on line 41 and see the path. It'll save File1.txt into Folder2 in
+            // Put break point on line 49 then press f10 and see the path. It'll save File1.txt into Folder2 in
             // your c-drive. Use intellisense it hits break point to see value of file3 and really
             // see what Path.Combine does. Converts two paths into a single path, so, you can say,
             // C:\Folder2 is path 1 and File1.txt is path 2.....so Path.Combine will make this into
             // C:\Folder2\File1.txt
             var file3 = File.Create(Path.Combine(@"C:\Folder2", "File1.txt"));
+
+            string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
 #endregion
         }
