@@ -127,7 +127,7 @@ namespace ConsoleApplication1
             // than one line, therefore we have IEnumerable of lines meaning that we have a COLLECTION/GROUP
             // of lines. So I have set the collection name to 'lines'. Once we get our group of 'lines'
             // we need to do a foreach loop to print EACH line in the GROUP of lines. HOVER YOUR
-            // MOUSE OVER READLINES. See how in the intellisense it says IEnumerable<string>?????? Now
+            // MOUSE OVER READLINES(). See how in the intellisense it says IEnumerable<string>?????? Now
             // you know how I knew to do IEnumerable<string> lines = ......
             IEnumerable<string> lines = File.ReadLines(@"C:\Folder2\Test.doc");
 
