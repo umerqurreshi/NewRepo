@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Text;
 
 namespace ConsoleApplication1
 {
@@ -95,7 +94,7 @@ namespace ConsoleApplication1
 
 
             // Simply create Microsoft Word 97-2003 document
-            File.WriteAllText(@"C:\Folder2\Test.doc", "Hi word doc");
+            File.WriteAllText(@"C:\Folder2\Test.doc", "Hi word doc.\r\nNew line here!");
 
             // Create a Microsoft word document (post 2007)
             File.WriteAllText(@"C:\Folder2\Test1.docx", "Hi word doc");
@@ -123,6 +122,41 @@ namespace ConsoleApplication1
             // what is already in there
             File.Copy(@"C:\Folder2\Test.doc", @"C:\Folder2\TestCopy.doc", true);
 
+            // Let's read from a file and print the contents to the console window. Inside Test.Doc 
+            // in line 98 I have made sure we have more than one line of text. Therefore we have more
+            // than one line, therefore we have IEnumerable of lines meaning that we have a collection
+            // of lines. So I have set the collection name to 'lines'. Once we get our group of 'lines'
+            // we need to do a foreach loop to print EACH line in the GROUP of lines. HOVER YOUR
+            // MOUSE OVER READLINES. See how in the intellisense it says IEnumerable<string>?????? Now
+            // you know how I knew to do IEnumerable<string> lines = ......
+            IEnumerable<string> lines = File.ReadLines(@"C:\Folder2\Test.doc");
+
+            // here we create a variable called myLine which is obv of type string because we have a 
+            // collection / group of strings. Read the foreach loop like you are reading english, so
+            // for EACH myLine in lines....print myLine....so if there are 2, it'll print 2 etc.
+            foreach (string myLine in lines)
+            {
+                Console.WriteLine(myLine);
+            }
+
+            // We can also just read the file contents as a single string (no need for foreach loop) like so:
+            // HOVER MOUSE OVER READALLTEXT....see in the intellisense it returns type string?????
+            // Now you now why I said string content =.......
+            string content = File.ReadAllText(@"C:\Folder2\Test.doc");
+            Console.WriteLine(content);
+
+
+            //See how similar (almost IDENTICAL) this array example is to the IEnumerable example? That's
+            // because Array implements IEnumerable interface!!! So does List. In Simple English, List
+            // and arrays are COLLECTIONS, they have a COLLECTION of items....therefore to print EACH
+            // INDIVIDUAL item, we must LOOP through the results via the foreach loop!!!
+            string[] linesInFile = File.ReadAllLines(@"C:\Folder2\Test.doc");
+
+            foreach (string lineInFile in linesInFile)
+            {
+                Console.WriteLine(lineInFile);
+            }
+            Console.ReadLine();
             string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
             #endregion
