@@ -118,9 +118,6 @@ namespace ConsoleApplication1
             // Automatically open a file! 
             Process.Start(@"C:\Folder2\Test.doc");
             
-          
-
-            
             string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
             #endregion
