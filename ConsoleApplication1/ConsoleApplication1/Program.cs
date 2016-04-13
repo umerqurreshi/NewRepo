@@ -118,6 +118,11 @@ namespace ConsoleApplication1
             // Automatically open a file! 
             Process.Start(@"C:\Folder2\Test.doc");
             
+            // Copy file from old file Test.doc to a new file TestCopy.doc (both will be in Folder2 obviously)
+            // 'true' means that in future if we copy into TestCopy.doc then it will override (replace)
+            // what is already in there
+            File.Copy(@"C:\Folder2\Test.doc", @"C:\Folder2\TestCopy.doc", true);
+
             string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
             #endregion
