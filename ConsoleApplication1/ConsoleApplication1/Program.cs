@@ -123,7 +123,7 @@ namespace ConsoleApplication1
             File.Copy(@"C:\Folder2\Test.doc", @"C:\Folder2\TestCopy.doc", true);
 
             // Let's read from a file and print the contents to the console window. Inside Test.Doc 
-            // in line 98 I have made sure we have more than one line of text. Therefore we have more
+            // in line 97 I have made sure we have more than one line of text. Therefore we have more
             // than one line, therefore we have IEnumerable of lines meaning that we have a collection
             // of lines. So I have set the collection name to 'lines'. Once we get our group of 'lines'
             // we need to do a foreach loop to print EACH line in the GROUP of lines. HOVER YOUR
@@ -156,6 +156,7 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine(lineInFile);
             }
+
             Console.ReadLine();
             string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
