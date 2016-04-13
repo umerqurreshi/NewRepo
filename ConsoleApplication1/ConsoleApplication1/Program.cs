@@ -149,7 +149,9 @@ namespace ConsoleApplication1
             //See how similar (almost IDENTICAL) this array example is to the IEnumerable example? That's
             // because Array implements IEnumerable interface!!! So does List. In Simple English, List
             // and arrays are COLLECTIONS, they have a COLLECTION of items....therefore to print EACH
-            // INDIVIDUAL item, we must LOOP through the results via the foreach loop!!!
+            // INDIVIDUAL item, we must LOOP through the results via the foreach loop!!! HOVER MOUSE
+            // OVER READALLLINES....See in intellisense it is of type string[] (string array)???? Now
+            // you know why I did string[] linesInFile
             string[] linesInFile = File.ReadAllLines(@"C:\Folder2\Test.doc");
 
             foreach (string lineInFile in linesInFile)
