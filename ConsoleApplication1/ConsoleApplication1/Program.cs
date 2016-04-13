@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -62,7 +63,34 @@ namespace ConsoleApplication1
             // you see that in line 60, we simply pass in builder.ToString() as the second argument.
             // Remember that 2nd argument in File.WriteAllText is the content which is of type string.
             // However, our builder object is of type StringBuilder and that is why we do 
-            // builder.ToString() to convert from type StringBuilder to type string. 
+            // builder.ToString() to convert from type StringBuilder to type string. Note that in
+            // StringBuilder I do .Append() then .AppendLine()...I do this because AppendLine() means
+            // it will automatically put the text onto the next line
+
+            // File.WriteAllLines, we have to append an Array of strings instead of just string.
+            // As you can see, in the second argument we pass in array of strings, in this case 2. 
+            // We can do Stringbuilder example with File.WriteAllLines. 
+            File.WriteAllLines(@"C:\Folder2\File1.txt", new string[] {"Umer is ok", "Adeeb is OK"});
+
+            StringBuilder builder1 = new StringBuilder();
+            builder1.Append("Umer is ok").AppendLine("Is Adeeb OK");
+
+            StringBuilder builder2 = new StringBuilder();
+            builder2.Append("Is this good?").AppendLine("Surely it is not");
+
+            File.WriteAllLines(@"C:\Folder2\File1.txt", new List<string> {builder1.ToString(), "Are we OK?", builder2.ToString()});
+            //Note above how we passed in 3 arguments: builder1.ToString(), Hardcoded string, builder2.ToString()
+            // Also note how we used List String instead of array. Can use either. So the above example
+            // as an array would be: 
+            File.WriteAllLines(@"C:\Folder2\File1.txt", new string[] { builder1.ToString(), "Are we OK?", builder2.ToString() });
+            
+            // Now go repeat the above using File.AppendAllText() and File.AppendAllLines().
+            // Remember that File.AppendAllText() is the same as File.WriteAllText() except that in
+            // .AppendAllText() the existing content in the file is NOT overwritten. In .WriteAllText()
+            // the content in the file IS overwritten. Again, File.AppendAllLines(), adds to existing
+            // content in the file whereas File.WriteAllLines() replaces the content in the file. 
+            // File.AppendAllLines() and File.WriteAllLines() expect an ARRAY/LIST of strings whereas
+            // File.AppendAllText() and File.WriteAllText() expect a single string object
             string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
 #endregion
