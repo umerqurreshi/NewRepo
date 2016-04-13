@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace ConsoleApplication1
 {
@@ -24,7 +25,7 @@ namespace ConsoleApplication1
             // hits the break point, it'll do xxxx\Folder2\File1.txt....therefore we first need to 
             //create a folder (DIRECTORY) called Folder2.....so let's do this on line 37
 
-            var file2 = File.Create(Path.Combine("Folder2", "File1.txt"));
+           // var file2 = File.Create(Path.Combine("Folder2", "File1.txt"));
 
             // Now, comment out above 2 lines of code and then check C-drive for a folder called
             // Folder2 after you run the below  code...Note, the '@' removes the red 
@@ -48,6 +49,20 @@ namespace ConsoleApplication1
             // C:\Folder2\File1.txt
             var file3 = File.Create(Path.Combine(@"C:\Folder2", "File1.txt"));
 
+            // Let's save a long line of text in File1.txt. 
+            File.WriteAllText(@"C:\Folder2\File1.txt", "Hey you are you ok?");
+            //As we can see, if our content is long, say a paragraph, then this line of code would 
+            // look horrible. For this reason when we want to add loads of strings, we use 
+            //stringbuilder. Let's use it.
+
+            StringBuilder builder = new StringBuilder();
+            builder.Append("Hi are you ok I am fine.").AppendLine("This will be on a new line");
+            File.WriteAllText(@"C:\Folder2\File1.txt", builder.ToString());
+            // Things to note about stringbuilder are that we can keep appending (adding strings) and 
+            // you see that in line 60, we simply pass in builder.ToString() as the second argument.
+            // Remember that 2nd argument in File.WriteAllText is the content which is of type string.
+            // However, our builder object is of type StringBuilder and that is why we do 
+            // builder.ToString() to convert from type StringBuilder to type string. 
             string variableHereSoYouCanMovePastLine49BreakPointAndSeeTheValueInIntellisense = String.Empty;
 
 #endregion
