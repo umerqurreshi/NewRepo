@@ -124,7 +124,7 @@ namespace ConsoleApplication1
 
             // Let's read from a file and print the contents to the console window. Inside Test.Doc 
             // in line 97 I have made sure we have more than one line of text. Therefore we have more
-            // than one line, therefore we have IEnumerable of lines meaning that we have a collection
+            // than one line, therefore we have IEnumerable of lines meaning that we have a COLLECTION/GROUP
             // of lines. So I have set the collection name to 'lines'. Once we get our group of 'lines'
             // we need to do a foreach loop to print EACH line in the GROUP of lines. HOVER YOUR
             // MOUSE OVER READLINES. See how in the intellisense it says IEnumerable<string>?????? Now
