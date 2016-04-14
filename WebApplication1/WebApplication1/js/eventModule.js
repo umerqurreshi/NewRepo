@@ -22,7 +22,7 @@ angular.module('eventModule', [])
 
 .controller('ServiceController', ['$scope', '$resource', '$filter', function ($scope, $resource, $filter) {
 
-    var service = $resource("http://localhost:62100/api/values");
+    var service = $resource("http://localhost:55500/api/values");
     var fields = [];
     var objects = [];
     var objField = { fieldName: "txtFirstName" };
