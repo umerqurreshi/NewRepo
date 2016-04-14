@@ -1,6 +1,7 @@
 ﻿namespace Inheritance.Models
 {
-    class PartTimeEmployees
+    public sealed class PartTimeEmployees : Employees
     {
+        public string WeeklyRate { get; set; }
     }
 }
