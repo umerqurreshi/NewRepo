@@ -6,7 +6,7 @@ namespace Inheritance.Models
     {
         public string AnnualSalary { get; set; }
 
-        public List<FulltimeEmployees> GetAllEmployees()
+        public static List<FulltimeEmployees> GetAllEmployees()
         {
             var fte = FulltimeEmployeesRegister();
 
@@ -40,6 +40,15 @@ namespace Inheritance.Models
                     Occupation = "Doctor",
                     AnnualSalary = "43000",
                     Age = 35
+                },
+
+                new FulltimeEmployees
+                {
+                    Firstname = "Leyton",
+                    Lastname = "Joicud",
+                    Occupation = "Analyst",
+                    AnnualSalary = "87000",
+                    Age = 31
                 }
             };
             return fte;
